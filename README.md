@@ -105,3 +105,10 @@ Delete
     $crud->delete('Account', $id);
 
 ```
+
+Describe
+
+```bash
+    $crud->describe('Account');
+
+```
