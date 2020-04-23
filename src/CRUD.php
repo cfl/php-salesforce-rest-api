@@ -137,4 +137,26 @@ class CRUD
 
         return true;
     }
+
+    public function describe($object)
+    {
+        $url = "$this->instance_url/services/data/v39.0/sobjects/$object/describe";
+
+        $client = new Client();
+
+        $request = $client->request('GET', $url, [
+            'headers' => [
+                'Authorization' => "OAuth $this->access_token",
+                'Content-type' => 'application/json'
+            ]
+        ]);
+
+        $status = $request->getStatusCode();
+
+        if ($status != 200) {
+            die("Error: call to URL $url failed with status $status, response: " . $request->getReasonPhrase());
+        }
+
+        return json_decode($request->getBody(), true);
+    }
 }
