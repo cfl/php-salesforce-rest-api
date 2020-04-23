@@ -109,6 +109,6 @@ Delete
 Describe
 
 ```bash
-    $crud->describe('Account');
+    $arr_result = $crud->describe('Account');
 
 ```
