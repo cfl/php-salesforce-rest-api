@@ -1,4 +1,4 @@
-# Php Salesforce Rest Api
+# PHP Salesforce REST API
 
 ```Bijesh Shrestha``` ```bjsmasth``` ```bjsmasth@gmail.com``` ```bjsmasth``` ```php rest api```
 
@@ -64,7 +64,7 @@ Query
     $query = 'SELECT Id,Name FROM ACCOUNT LIMIT 100';
     
     $crud = new \bjsmasth\Salesforce\CRUD();
-    $crud->query($query);
+    $arr_results = $crud->query($query);
 ```
 
 Create
